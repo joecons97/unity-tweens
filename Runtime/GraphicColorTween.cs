@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 namespace Tweens {
   public sealed class GraphicColorTween : Tween<Graphic, Color> {
-    internal sealed override Color Current(Graphic component) {
+    protected sealed override Color Current(Graphic component) {
       return component.color;
     }
 
-    internal sealed override Color Lerp(Color from, Color to, float time) {
+    protected sealed override Color Lerp(Color from, Color to, float time) {
       return Color.LerpUnclamped(from, to, time);
     }
 
-    internal sealed override void Apply(Graphic component, Color value) {
+    protected sealed override void Apply(Graphic component, Color value) {
       component.color = value;
     }
   }

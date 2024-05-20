@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace Tweens {
   public sealed class EulerAnglesYTween : Tween<Transform, float> {
-    internal sealed override float Current(Transform component) {
+    protected sealed override float Current(Transform component) {
       return component.eulerAngles.y;
     }
 
-    internal sealed override float Lerp(float from, float to, float time) {
+    protected sealed override float Lerp(float from, float to, float time) {
       return Mathf.LerpUnclamped(from, to, time);
     }
 
-    internal sealed override void Apply(Transform component, float value) {
+    protected sealed override void Apply(Transform component, float value) {
       var eulerAngles = component.eulerAngles;
       eulerAngles.y = value;
       component.eulerAngles = eulerAngles;
