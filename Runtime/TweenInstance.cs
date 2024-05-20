@@ -83,7 +83,7 @@ namespace Tweens {
       }
     }
 
-    protected sealed override void Update() {
+    public sealed override void Update() {
       if (component == null) {
         Cancel();
         return;

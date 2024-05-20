@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Tweens {
   public sealed class RectTween : Tween<Transform, Rect> {
-    protected sealed override Rect Current(Transform component) {
+    public sealed override Rect Current(Transform component) {
       return Rect.zero;
     }
 
-    protected sealed override Rect Lerp(Rect from, Rect to, float time) {
+    public sealed override Rect Lerp(Rect from, Rect to, float time) {
       var x = Mathf.LerpUnclamped(from.x, to.x, time);
       var y = Mathf.LerpUnclamped(from.y, to.y, time);
       var width = Mathf.LerpUnclamped(from.width, to.width, time);
@@ -15,6 +15,6 @@ namespace Tweens {
       return new Rect(x, y, width, height);
     }
 
-    protected sealed override void Apply(Transform component, Rect value) { }
+    public sealed override void Apply(Transform component, Rect value) { }
   }
 }

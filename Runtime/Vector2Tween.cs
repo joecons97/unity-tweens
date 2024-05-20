@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace Tweens {
   public sealed class Vector2Tween : Tween<Transform, Vector2> {
-    protected sealed override Vector2 Current(Transform component) {
+    public sealed override Vector2 Current(Transform component) {
       return Vector2.zero;
     }
 
-    protected sealed override Vector2 Lerp(Vector2 from, Vector2 to, float time) {
+    public sealed override Vector2 Lerp(Vector2 from, Vector2 to, float time) {
       return Vector2.LerpUnclamped(from, to, time);
     }
 
-    protected sealed override void Apply(Transform component, Vector2 value) { }
+    public sealed override void Apply(Transform component, Vector2 value) { }
   }
 }

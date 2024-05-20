@@ -48,8 +48,8 @@ namespace Tweens.Core {
     /// <summary>The on finally delegate will be invoked when the Tween has ended or has been cancelled.</summary>
     public OnFinallyDelegate<ComponentType, DataType> onFinally;
 
-    protected abstract DataType Current(ComponentType component);
-    protected abstract DataType Lerp(DataType from, DataType to, float time);
-    protected abstract void Apply(ComponentType component, DataType value);
+    public abstract DataType Current(ComponentType component);
+    public abstract DataType Lerp(DataType from, DataType to, float time);
+    public abstract void Apply(ComponentType component, DataType value);
   }
 }
