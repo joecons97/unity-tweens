@@ -26,7 +26,7 @@ namespace Tweens {
     readonly internal string @tweenTypeName;
 #endif
 
-    internal abstract void Update();
+    public abstract void Update();
     /// <summary>The cancel method will cancel the Tween. When the Tween is cancelled, the OnCancel and OnFinally delegates will be invoked.</summary>
     public abstract void Cancel();
 
